@@ -1,8 +1,20 @@
-#features = ['OverallQual','GrLivArea','GarageCars','TotalBsmtSF','1stFlrSF','FullBath','TotRmsAbvGrd','YearBuilt']
+Criar um ambiente virtual (recomendado)
 
-LotFrontage    212
-MasVnrArea       6
-GarageYrBlt     58
+Crie um novo ambiente virtual escolhendo um intérprete de Python e criando um diretório .\venv para mantê-lo:
+	python -m venv --system-site-packages .\venv
+
+Ative o ambiente virtual:
+	.\venv\Scripts\activate
+
+Instale pacotes em um ambiente virtual sem afetar a configuração do sistema host. Comece fazendo upgrade de pip:
+	pip install --upgrade pip
+	pip list  # show packages installed within the virtual environment
+
+Para sair do ambiente virtual posteriormente:
+	deactivate  # don't exit until you're done using TensorFlow
+
+------------------------------------------------------------------------------------------------------------
+
 
 # Fill in the lines below: drop columns in training and validation data
 reduced_X_train = X_train.drop(cols_with_missing, axis=1)
